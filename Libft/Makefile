@@ -10,18 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-# 1. Target - files that need to be up-to-date to build the program
-# 2. Command - to build main if thode dependencies are satisfied
-# NOTE - command needs to be a tab
-# 3. CC -name of compiler / CFLAGS
-# NOTE - replace - $
-# 4. NAME - gives a name to our executable (the traditional a.out)
-# 5. SRC - specifies all files with the .c extenstion that we want to compile together
-# 6. OBJ - tranforms all .c to .o
-# 7. Clean - to "redo" make, otherwise it will tell you "file up-to-date"
-# 8. fclean - will first clean, than removes the excutable
-# 9. re - first fclean, then rebuild all
-# 10. PHONY - prevents conflict when you have a file named, clean, fclean, re
+# 1. NAME - gives a name to our executable (the traditional a.out)
+# 2. SRC - specifies all files with the .c extenstion that we want to compile together
+# 3. OBJ - tranforms all .c to .o
+# 4. Clean - to "redo" make, otherwise it will tell you "file up-to-date"
+# 5. fclean - will first clean, than removes the excutable
+# 6. re - first fclean, then rebuild all
+# 7. PHONY - prevents conflict when you have a file named, clean, fclean, re
 
 NAME = libft.a
 
