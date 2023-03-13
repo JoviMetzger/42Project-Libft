@@ -17,9 +17,9 @@ make
 ```
 2. You can create your own main() or use my main() which I have included/commented out in each function.
 
-3. Finally, execute the program using the following command: 
+3. Finally, execute the program using the following command: my_project can ether be a main.c file or the function file where you using my main().
 ```bash
-./libft
+gcc -Wall -Werror -Wextra libft.a my_project && ./a.out
 ```
 
 ## Subject
