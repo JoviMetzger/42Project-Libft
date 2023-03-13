@@ -7,7 +7,7 @@ This repository contains my own C library, called "libft".
 The library was created as part of my 42_cursus program to rewrite standard C functions from scratch. The library(libft) contains a collection of functions with the same prototypes and expected behavior as the original functions in the standard C library (libc), but with the prefix 'ft_'  (ft_functionName).
 It is a great way for a beginner to learn and understand C.
 
-### Installation
+## Installation
 
 To install this library, follow the steps below:
 
