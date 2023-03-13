@@ -13,13 +13,13 @@ To install this library, follow the steps below:
 
 1. Compile the library by running the following command:
 ```bash
-make
+$ make
 ```
 2. You can create your own main() or use my main() which I have included/commented out in each function.
 
-3. Finally, execute the program using the following command: my_project can ether be a main.c file or the function file where you using my main().
+3. Finally, execute the program using the following command: *my_project can either be a main.c file or the function file where you using my main().*
 ```bash
-gcc -Wall -Werror -Wextra libft.a my_project && ./a.out
+$ gcc -Wall -Werror -Wextra libft.a my_project && ./a.out
 ```
 
 ## Subject
