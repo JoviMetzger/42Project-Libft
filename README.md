@@ -21,7 +21,3 @@ $ make
 ```bash
 $ gcc -Wall -Werror -Wextra libft.a my_project && ./a.out
 ```
-
-## Subject
-
-You can find the subject for this project [here](https://cdn.intra.42.fr/pdf/pdf/73987/en.subject.pdf).
