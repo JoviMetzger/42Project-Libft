@@ -82,3 +82,33 @@ char	*ft_itoa(int n)
 	//printf("%d\n", ft_division(len));
 	printf("%s", ft_itoa(n));
 }*/
+
+// ---------------------------------------------------------------------------------
+// -----------------  Shorter version  ---------------------------------------------
+/*
+size_t ft_get_length(int *result)
+{
+    size_t len = 0;
+    while (result[len] != -1) // Assume -1 is the sentinel value
+        len++;
+    return len;
+}
+
+char *ft_itoa(int *result)
+{
+	size_t len = ft_get_length(result);
+ 	char *resultStr = (char *)malloc(len + 2); // +2 for possible '-' and '\0'
+
+    	size_t start = 0;
+    	while (start < len && result[start] == 0)
+        	start++; // Skip leading zeros
+
+    	size_t k = 0;
+    	for (size_t i = start; i <= len; i++)
+        	resultStr[k++] = result[i] + '0'; // Copy str including '\0'
+    
+    	if (k == 0) // If result is 0
+       		resultStr = ft_strdup("0");
+    	return resultStr;
+}
+*/
