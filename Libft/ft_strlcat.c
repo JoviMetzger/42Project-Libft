@@ -57,3 +57,46 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 
 	printf("%zu", ft_strlcat(dest, src, n));
 }*/
+
+
+// ------------------------------------------------------------------
+// --------------- MORE OPTIONS -------------------------------------
+char	*ft_strcat(char *dest, char *src)
+{
+	int	i;
+	int	k;
+
+	i = 0;
+	k = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[k] != '\0')
+	{
+		dest[i + k] = src[k];
+		k++;
+	}
+	dest[i + k] = '\0';
+	return (dest);
+}
+
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
+{
+	unsigned int	i;
+	unsigned int	k;
+
+	i = 0;
+	k = 0;
+	while (dest[k] != '\0')
+	{
+		k++;
+	}
+	while (src[i] != '\0' && i < nb)
+	{
+		dest[k + i] = src[i];
+		i++;
+	}
+	dest[k + i] = '\0';
+	return (dest);
+}
