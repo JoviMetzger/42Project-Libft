@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstadd_back.c                                   :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jmetzger <jmetzger@student.codam.n>          +#+                     */
+/*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/28 05:05:09 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/12 19:03:37 by jmetzger      ########   odam.nl         */
+/*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
+/*   Updated: 2025/02/16 12:07:10 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

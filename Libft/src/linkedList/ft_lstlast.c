@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstlast.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jmetzger <jmetzger@student.codam.n>          +#+                     */
+/*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/28 07:22:56 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/12 19:03:37 by jmetzger      ########   odam.nl         */
+/*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
+/*   Updated: 2025/02/16 12:07:43 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

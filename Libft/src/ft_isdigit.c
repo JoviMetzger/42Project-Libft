@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isdigit.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jmetzger <jmetzger@student.codam.n>          +#+                     */
+/*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/06 08:37:46 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/12 19:02:23 by jmetzger      ########   odam.nl         */
+/*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
+/*   Updated: 2025/02/16 12:08:49 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

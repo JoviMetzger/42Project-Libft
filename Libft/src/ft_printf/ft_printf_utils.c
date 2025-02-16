@@ -3,14 +3,13 @@
 /*                                                        ::::::::            */
 /*   ft_printf_utils.c                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jmetzger <jmetzger@student.codam.n>          +#+                     */
+/*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/09 13:28:14 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/12 19:09:26 by jmetzger      ########   odam.nl         */
+/*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
+/*   Updated: 2025/02/16 12:06:56 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
 
 // PRINT_STRING FUNCTION
 int	ft_putstr(char *str)

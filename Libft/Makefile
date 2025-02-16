@@ -129,3 +129,116 @@ fclean:	clean
 re:	fclean all
 
 .PHONY: all clean fclean re
+
+
+
+# NAME := libft.a
+# COMPILER := gcc
+# RM := rm -rf
+
+# # Compiler flags
+# CFLAGS += -MMD -MP
+# CFLAGS += -g
+
+# # Build directory for objects and dependencies
+# BUILD_DIR := .build/
+# INC_DIR := includes/
+# SRC_DIR := src/
+
+# # Source files
+# LIB := ft_toupper.c \
+# 	ft_tolower.c \
+# 	ft_isalpha.c \
+# 	ft_isdigit.c \
+# 	ft_isalnum.c \
+# 	ft_isascii.c \
+# 	ft_isprint.c \
+# 	ft_memset.c \
+# 	ft_memcpy.c \
+# 	ft_memmove.c \
+# 	ft_memchr.c \
+# 	ft_memcmp.c \
+# 	ft_strmapi.c \
+# 	ft_strjoin.c \
+# 	ft_striteri.c \
+# 	ft_strtrim.c \
+# 	ft_strlcpy.c \
+# 	ft_strlcat.c \
+# 	ft_strchr.c \
+# 	ft_strrchr.c \
+# 	ft_strnstr.c \
+# 	ft_strncmp.c \
+# 	ft_strdup.c \
+# 	ft_strlen.c \
+# 	ft_bzero.c \
+# 	ft_calloc.c \
+# 	ft_split.c \
+# 	ft_atoi.c \
+# 	ft_itoa.c \
+# 	ft_substr.c \
+# 	ft_putchar_fd.c \
+# 	ft_putstr_fd.c \
+# 	ft_putnbr_fd.c \
+# 	ft_putendl_fd.c
+
+# LLIST := ft_lstnew.c \
+# 	ft_lstsize.c \
+# 	ft_lstadd_back.c \
+# 	ft_lstadd_front.c \
+# 	ft_lstlast.c \
+# 	ft_lstdelone.c \
+# 	ft_lstiter.c \
+# 	ft_lstclear.c \
+# 	ft_lstmap.c
+
+# GNL := get_next_line.c
+
+# PRINTF := ft_printf.c \
+# 	ft_printf_utils.c \
+# 	ft_printf_unsigned_int.c \
+# 	ft_printf_pointer.c \
+# 	ft_printf_hexadecimal.c
+
+# # Combine all sources
+# SRCS			:=	$(addprefix $(SRC_DIR)libft/, $(LIB))			\
+# 					$(addprefix $(SRC_DIR)linkedList/, $(LLIST))	\
+# 					$(addprefix $(SRC_DIR)GNL/, $(GNL))				\
+# 					$(addprefix $(SRC_DIR)ft_printf/, $(PRINTF))
+
+# # Generate object file names by replacing src/ with .build/
+# OBJS := $(SRCS:%.c=$(BUILD_DIR)%.o)
+
+# # Generate dependency files
+# DEPS := $(OBJS:.o=.d)
+
+# # Header files
+# HEADERS_FILES := libft.h linkedList.h ft_printf.h get_next_line.h
+# HEADERS := $(addprefix $(INC_DIR), $(HEADERS_FILES))
+
+# # Default target
+# all: $(NAME)
+
+# # Main target
+# $(NAME): $(OBJS)
+# 	ar rcs $(NAME) $(OBJS)
+
+# # Pattern rule for object files
+# $(BUILD_DIR)src/%.o: src/%.c $(HEADERS)
+# 	@mkdir -p $(@D)
+# 	$(COMPILER) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
+
+# clean:
+# 	@$(RM) $(BUILD_DIR)
+
+# fclean: clean
+# 	@$(RM) $(NAME)
+
+# re: fclean all
+
+# print-%:
+# 	$(info $($*))
+
+# # Include dependencies
+# -include $(DEPS)
+
+# .PHONY: all clean fclean re print-%
