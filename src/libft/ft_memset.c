@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:21 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:41:20 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ void	*ft_memset(void *str, int ch, size_t n)
 	return (str);
 }
 
-/*int	main(void)
-{
-	char str[] = "12some";
-	int	ch = '$';
-	size_t n = 2;
-
-	ft_memset(str, ch, n);
-	printf("%s", str);
-}*/

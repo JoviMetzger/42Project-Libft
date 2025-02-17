@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:08:29 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:37:40 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ void	ft_bzero(void *str, size_t n)
 		i++;
 	}
 }
-
-/*int	main(void)
-{
-	char str[] = "12some";
-	size_t n = 2;
-
-	ft_bzero(str, n);
-	printf("%s", str);
-}*/

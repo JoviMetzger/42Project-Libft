@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:08:41 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:38:08 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_isalpha(int letter)
 	else
 		return (0);
 }
-
-/*int main (void) 
-{
-	int	letter = 'g';
-	int re = ft_isalpha(letter);
-	printf("%d", re);
-}*/

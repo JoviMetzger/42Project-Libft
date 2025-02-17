@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:16 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:40:58 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int	main(void)
-{
-	char	dest[100] = "aaaa";
-	const char	src[100] = "123";
-	size_t	n = 2;
-
-	printf("%s", ft_memmove(dest, src, n));
-}*/

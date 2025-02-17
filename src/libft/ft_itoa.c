@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:08:59 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:38:34 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,15 +74,6 @@ char	*ft_itoa(int n)
 	result[len] = '\0';
 	return (result);
 }
-
-/*int	main(void)
-{
-	int	n = -0;
-	//int len = ft_len(n);
-	//printf("%d\n", ft_len(n));
-	//printf("%d\n", ft_division(len));
-	printf("%s", ft_itoa(n));
-}*/
 
 // ---------------------------------------------------------------------------------
 // -----------------  Shorter version  ---------------------------------------------

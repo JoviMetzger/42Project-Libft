@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:10:44 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:45:26 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,6 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 		return (0);
 	return ((unsigned char)*str1 - (unsigned char)*str2);
 }
-
-
-/*int	main(void)
-{
-	const char str1[] = "sOme";
-	const char str2[] = "some";
-	size_t	n = 3;
-
-	int	re = ft_strncmp(str1, str2, n);
-	printf("%d", re);
-	return (0);
-}*/
 
 
 // ----------------------------------------------------------------------

@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:48 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:42:22 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ char	*ft_strchr(const char *str, int n)
 	}
 	return ((char *)str);
 }
-
-/*int	main(void)
-{
-	const char str[] = "hello";
-	int n = 'l';
-	printf("%s", ft_strchr(str, n));
-}*/

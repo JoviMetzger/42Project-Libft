@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:10:06 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:44:21 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	}
 	*dest = '\0';
 	return (dest_len + i);
-}	
-
-/*int	main(void)
-{
-	char	dest[] = "something";
-	const char src[] = "thing";
-	size_t n = 2;
-
-	printf("%zu", ft_strlcat(dest, src, n));
-}*/
+}
 
 
 // ------------------------------------------------------------------

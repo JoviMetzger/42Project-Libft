@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:08:33 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:37:59 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ void    *ft_calloc(size_t count, size_t n)
     ft_bzero(ptr, count);
     return (ptr);
 }
-
-/*int	main(void)
-{
-	size_t count = 5;
-	size_t n = 2;
-
-	printf("%d", ft_calloc(count, n));
-}*/

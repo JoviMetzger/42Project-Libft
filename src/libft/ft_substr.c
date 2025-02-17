@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:11:04 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:47:34 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/*int	main(void)
-{
-	char const s[] = "hello world";
-	unsigned int	start = 7;
-	size_t	len = 2;
-	printf("%s", ft_substr(s,start,len));
-
-	return (0);
-}*/

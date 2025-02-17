@@ -76,44 +76,44 @@ int main()
 
 	// Test memory functions
 	printf("Test memory functions\n");
-	char mem1[10];
-	char mem2[10];
-	ft_memset(mem1, 'A', 10);
-	ft_memcpy(mem2, mem1, 10);
-	ft_memmove(mem2, mem1, 10);
-	ft_memchr(mem1, 'A', 10);
-	ft_memcmp(mem1, mem2, 10);
+	// char mem1[10];
+	// char mem2[10];
+	ft_memset("12some", '$', 2);
+	ft_memcpy("llllo", "hething", 2);
+	ft_memmove("aaaa", "123", 2);
+	ft_memchr("hello", 'e', 4);
+	ft_memcmp("what", "what", 2);
 
 	// Test string functions
 	printf("Test string functions\n");
 	char *str1 = ft_strdup("Hello");
 	char *str2 = ft_strjoin("Hello", " World");
-	ft_striteri(str2, [](unsigned int i, char *c) { *c = ft_toupper(*c); });
-	char *str3 = ft_strtrim("  Hello World ", " ");
-	char dest[20];
-	ft_strlcpy(dest, "Hello", 20);
-	ft_strlcat(dest, " World", 20);
+	char *str3 = ft_strtrim("Hello World", "World");
+	printf("%s\n%s\n%s\n\n", str1, str2, str3);
+	// char dest[20];
+	ft_strlcpy("hwllo", "world", 2);
+	ft_strlcat("something", "thing", 2);
 	ft_strchr("Hello", 'e');
-	ft_strrchr("Hello", 'l');
-	ft_strnstr("Hello World", "World", 11);
-	ft_strncmp("Hello", "World", 5);
+	ft_strrchr("helnlo", 'l');
+	ft_strnstr("Hello", "l", 4);
+	ft_strncmp("sOme", "some", 3);
 	ft_strlen("Hello");
 
 	// Test conversion functions
 	printf("Test conversion functions\n");
-	ft_atoi("123");
+	ft_atoi("  12ab12");
 	ft_itoa(123);
-	ft_atoi_base("123", "0123456789abcde");
+	ft_atoi_base("123", 16);
 
 	// Test memory allocation functions
 	printf("Test memory allocation functions\n");
-	ft_bzero(mem1, 10);
-	ft_calloc(10, sizeof(int));
+	ft_bzero("12some", 2);
+	ft_calloc(5, 2);
 
 	// Test split and substring functions
 	printf("Test split and substring functions\n");
-	ft_split("Hello World", ' ');
-	ft_substr("Hello World", 6, 5);
+	ft_split("JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC", ',');
+	ft_substr("hello world", 7, 2);
 
 	// Test file descriptor functions
 	printf("Test file descriptor functions\n");
@@ -136,7 +136,6 @@ int main()
 	ft_lstadd_back(&list, ft_lstnew("42"));
 	ft_lstsize(list);
 	ft_lstlast(list);
-	ft_lstiter(list, [](void *content) { ft_putstr_fd((char *)content, 1); });
 	ft_lstclear(&list, free);
 
 	// Test printf functions

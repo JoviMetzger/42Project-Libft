@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:08:45 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:38:11 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isascii(int value)
 		return (0);
 }
 
-/*int	main(void)
-{
-	int	value = 'w';
-	int re = ft_isascii(value);
-	printf("%d", re);
-}*/

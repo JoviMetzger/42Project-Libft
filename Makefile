@@ -6,7 +6,7 @@
 #    By: jmetzger <jmetzger@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 07:17:37 by jmetzger      #+#    #+#                  #
-#    Updated: 2025/02/12 18:44:15 by jmetzger      ########   odam.nl          #
+#    Updated: 2025/02/17 15:57:19 by jmetzger      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ INC_DIR 	:= includes/
 SRC_DIR 	:= src/
 
 # Source files
-LIB 		:= ft_toupper.c 		\
+LIB 		:= ft_toupper.c 	\
 				ft_tolower.c 	\
 				ft_isalpha.c 	\
 				ft_isdigit.c 	\
@@ -68,6 +68,7 @@ LIB 		:= ft_toupper.c 		\
 				ft_calloc.c 	\
 				ft_split.c 	\
 				ft_atoi.c 	\
+				ft_atoi_base.c \
 				ft_itoa.c 	\
 				ft_substr.c 	\
 				ft_putchar_fd.c \
@@ -114,11 +115,11 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC)   ✨Libft Done✨$(RESET)"
 
 $(OBJ_DIR)src/%.o: src/%.c $(HEADERS)
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
-	@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC)   ✨Libft Done✨
 
 # Clean	
 clean:

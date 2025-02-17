@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:10:59 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:47:09 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 
-/*int	main(void)
-{
-	char const s1[] = "Hello World";
-	char const set[] = "World";
-	printf("%s", ft_strtrim(s1, set));
-}*/

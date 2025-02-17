@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:10:30 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:44:52 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	}
 	return (ft_strlen(src));
 }
-
-/*int	main(void)
-{
-	char dest[100] = "hwllo";
-	const char	src[100] = "world";
-	size_t	n = 2;
-
-	printf("%zu", ft_strlcpy(dest, src, n));
-}*/
 
 
 // ----------------------------------------------------------------------

@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:52 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:42:27 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,3 @@ char	*ft_strdup(const char *str)
 	return (new);
 }
 
-/*int	main(void)
-{
-	const char str[] = "hello";
-	printf("%s", ft_strdup(str));
-}*/

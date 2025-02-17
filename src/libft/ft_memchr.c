@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:03 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:39:16 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ void	*ft_memchr(const void *str, int ch, size_t n)
 	return (NULL);
 }
 
-/*int	main(void)
-{
-	const char	str[] = "hello";
-	int	ch = 'e';
-	size_t n = 4;
-
-	printf("%s", ft_memchr(str, ch, n));
-}*/

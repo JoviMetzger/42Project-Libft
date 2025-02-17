@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:26:37 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/16 12:09:07 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/17 15:39:40 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-/*int	main(void)
-{
-	const char	str1[] = "what";
-	const char	str2[] = "what";
-	size_t	n = 2;
-
-	printf("%d", ft_memcmp(str1, str2, n));
-}*/
