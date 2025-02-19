@@ -66,84 +66,109 @@ int main()
 {
 	// Test character functions
 	printf("\nTest character functions\n");
-	ft_toupper('a');
-	ft_tolower('A');
-	ft_isalpha('a');
-	ft_isdigit('1');
-	ft_isalnum('a');
-	ft_isascii(127);
-	ft_isprint(' ');
+	printf("toupper('a') : %c\n", ft_toupper('a'));
+	printf("tolower('A') : %c\n", ft_tolower('A'));
+	printf("isalpha('a') : %d\n", ft_isalpha('a'));
+	printf("isdigit('1') : %d\n", ft_isdigit('1'));
+	printf("isalnum('a') : %d\n", ft_isalnum('a'));
+	printf("isascii(127) : %d\n", ft_isascii(127));
+	printf("isprint(' ') : %d\n", ft_isprint(' '));
 
 	// Test memory functions
-	printf("Test memory functions\n");
-	// char mem1[10];
-	// char mem2[10];
-	ft_memset("12some", '$', 2);
-	ft_memcpy("llllo", "hething", 2);
-	ft_memmove("aaaa", "123", 2);
-	ft_memchr("hello", 'e', 4);
-	ft_memcmp("what", "what", 2);
+	printf("\nTest memory functions\n");
+	char memset_test[] = "12some";
+	ft_memset(memset_test, '$', 2);
+	printf("memset : %s\n", memset_test);
+	
+	char memcpy_src[] = "hething";
+	char memcpy_dest[] = "llllo";
+	ft_memcpy(memcpy_dest, memcpy_src, 2);
+	printf("memcpy : %s\n", memcpy_dest);
+	
+	char memmove_src[] = "123";
+	char memmove_dest[] = "aaaa";
+	ft_memmove(memmove_dest, memmove_src, 2);
+	printf("memmove : %s\n", memmove_dest);
+	
+	printf("memchr : %s\n", (char *)ft_memchr("hello", 'e', 4));
+	printf("memcmp : %d\n", ft_memcmp("what", "what", 2));
 
 	// Test string functions
-	printf("Test string functions\n");
-	char *str1 = ft_strdup("Hello");
-	char *str2 = ft_strjoin("Hello", " World");
-	char *str3 = ft_strtrim("Hello World", "World");
-	printf("%s\n%s\n%s\n\n", str1, str2, str3);
-	// char dest[20];
-	ft_strlcpy("hwllo", "world", 2);
-	ft_strlcat("something", "thing", 2);
-	ft_strchr("Hello", 'e');
-	ft_strrchr("helnlo", 'l');
-	ft_strnstr("Hello", "l", 4);
-	ft_strncmp("sOme", "some", 3);
-	ft_strlen("Hello");
+	printf("\nTest string functions\n");
+	printf("strdup : %s\n", ft_strdup("Hello"));
+	printf("strjoin : %s\n", ft_strjoin("Hello", " World"));
+	printf("strtrim : %s\n", ft_strtrim("Hello World", "World"));
+	
+	char strlcpy_dest[10] = "hwllo";
+	ft_strlcpy(strlcpy_dest, "world", sizeof(strlcpy_dest));
+	printf("strlcpy : %s\n", strlcpy_dest);
+	
+	char strlcat_dest[20] = "something";
+	ft_strlcat(strlcat_dest, "thing", sizeof(strlcat_dest));
+	printf("strlcat : %s\n", strlcat_dest);
+	
+	printf("strchr : %s\n", ft_strchr("Hello", 'e'));
+	printf("strrchr : %s\n", ft_strrchr("helnlo", 'l'));
+	printf("strnstr : %s\n", ft_strnstr("Hello", "l", 4));
+	printf("strncmp : %d\n", ft_strncmp("sOme", "some", 3));
+	printf("strlen : %zu\n", ft_strlen("Hello"));
 
 	// Test conversion functions
-	printf("Test conversion functions\n");
-	ft_atoi("  12ab12");
-	ft_itoa(123);
-	ft_atoi_base("123", 16);
-
-	// Test memory allocation functions
-	printf("Test memory allocation functions\n");
-	ft_bzero("12some", 2);
-	ft_calloc(5, 2);
+	printf("\nTest conversion functions\n");
+	printf("atoi : %d\n", ft_atoi("  12ab12"));
+	printf("itoa : %s\n", ft_itoa(123));
+	printf("atoi_base : %d\n", ft_atoi_base("123", 16));
 
 	// Test split and substring functions
-	printf("Test split and substring functions\n");
-	ft_split("JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC", ',');
-	ft_substr("hello world", 7, 2);
+	printf("\nTest split and substring functions\n");
+	char **split_result = ft_split("JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC", ',');
+	for (int i = 0; split_result[i] != NULL; i++)
+	{
+		printf("split[%d] : %s\n", i, split_result[i]);
+		free(split_result[i]);
+	}
+	free(split_result);
+	printf("substr : %s\n", ft_substr("hello world", 6, 5));
 
 	// Test file descriptor functions
-	printf("Test file descriptor functions\n");
-	ft_putchar_fd('A', 1);
-	ft_putstr_fd("Hello", 1);
+	printf("\nTest file descriptor functions\n");
+	ft_putchar_fd('H', 1);
+	ft_putstr_fd("ello", 1);
 	ft_putnbr_fd(123, 1);
-	ft_putendl_fd("Hello", 1);
+	ft_putendl_fd("World", 1);
 
 	// Test get_next_line
-	// Create a test.txt file
-	printf("Test get_next_line\n");
-	int fd = open("test.txt", O_RDONLY);
-	get_next_line(fd);
-	close(fd);
+	printf("\nTest get_next_line\n");
+	int fd = open("test.txt", O_RDONLY); // Create a test.txt file fot testing
+	if (fd != -1)
+	{
+		char *line = get_next_line(fd);
+		if (line)
+		{
+			printf("get_next_line : %s\n", line);
+			free(line);
+		}
+		close(fd);
+	}
+	else
+		printf("Could not open test.txt\n");
 
 	// Test linked list functions
-	printf("Test linked list functions\n");
+	printf("\nTest linked list functions\n");
 	t_list *list = ft_lstnew("Hello");
 	ft_lstadd_front(&list, ft_lstnew("World"));
 	ft_lstadd_back(&list, ft_lstnew("42"));
-	ft_lstsize(list);
-	ft_lstlast(list);
-	ft_lstclear(&list, free);
+
+	printf("lstsize : %d\n", ft_lstsize(list));
+	printf("lstlast : %s\n", (char *)ft_lstlast(list)->content);
 
 	// Test printf functions
-	printf("Test printf functions\n");
+	printf("\nTest printf functions\n");
 	ft_printf("Hello %s\n", "World");
 
 	return 0;
 }
+
 
 ```
 
