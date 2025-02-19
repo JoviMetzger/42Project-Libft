@@ -41,12 +41,12 @@ char			*ft_strncat(char *dest, char *src, unsigned int nb);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
-int				ft_strncmp(const char *str1, const char *str2, size_t n);
-int				ft_strcmp(char *s1, char *s2);
+int			ft_strncmp(const char *str1, const char *str2, size_t n);
+int			ft_strcmp(char *s1, char *s2);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-size_t		  ft_strlen(char const *str);
-size_t		  ft_strlcpy(char *dest, char const *src, size_t n);
-size_t		  ft_strlcat(char *dest, const char *src, size_t n);
+size_t		    ft_strlen(char const *str);
+size_t		    ft_strlcpy(char *dest, char const *src, size_t n);
+size_t		    ft_strlcat(char *dest, const char *src, size_t n);
 
 // put-functions -> using write() needs a fd
 void			ft_putchar_fd(char c, int fd);
