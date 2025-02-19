@@ -69,6 +69,7 @@ LIB 		:= ft_toupper.c \
 				ft_split.c \
 				ft_atoi.c \
 				ft_atoi_base.c \
+				ft_itoa_base.c \
 				ft_itoa.c \
 				ft_substr.c \
 				ft_putchar_fd.c \
