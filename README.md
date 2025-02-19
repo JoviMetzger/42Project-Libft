@@ -45,7 +45,7 @@ $ make
 2. You can create your own main() or use my main() which I have included below.
 
 <details>
-  <summary><strong>main.c</strong></summary>
+  <summary><strong> ✉️ main.c</strong></summary>
   <br>
 
 ### Main()
