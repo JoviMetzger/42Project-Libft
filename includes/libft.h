@@ -67,7 +67,7 @@ int			ft_isprint(int value);
 int			ft_atoi(const char *str);
 int			ft_atoi_base(const char *str, int base);
 char			*ft_itoa(int n);
-char            *ft_itoa_base(long nbr, const char *base);
+char                      *ft_itoa_base(long nbr, const char *base);
 
 // extra-functions
 void			ft_bzero(void *str, size_t n);
