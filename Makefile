@@ -6,7 +6,7 @@
 #    By: jmetzger <jmetzger@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 07:17:37 by jmetzger      #+#    #+#                  #
-#    Updated: 2025/02/17 15:57:19 by jmetzger      ########   odam.nl          #
+#    Updated: 2025/02/21 20:15:42 by jmetzger      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,11 +95,25 @@ PRINTF 		:= ft_printf.c \
 				ft_printf_pointer.c \
 				ft_printf_hexadecimal.c
 
+DBLTOA		:= ft_dbltoa.c \
+				convert_to_sci_notation.c \
+				convert_binary_to_decimal.c \
+				convert_binary_to_decimal2.c \
+				ft_add.c \
+				ft_subs.c \
+				ft_multi.c \
+				ft_divi.c \
+				fraction.c \
+				ft_utils2.c \
+				ft_utils.c \
+				convert_to_str.c
+
 # Combine all sources
 SRCS		:=	$(addprefix $(SRC_DIR)libft/, $(LIB)) \
 				$(addprefix $(SRC_DIR)linkedList/, $(LLIST)) \
 				$(addprefix $(SRC_DIR)GNL/, $(GNL)) \
-				$(addprefix $(SRC_DIR)ft_printf/, $(PRINTF))
+				$(addprefix $(SRC_DIR)ft_printf/, $(PRINTF)) \
+				$(addprefix $(SRC_DIR)ft_dbltoa/, $(DBLTOA)) \
 
 # Generate object file names
 OBJS 		:= $(SRCS:%.c=$(OBJ_DIR)%.o)
@@ -108,7 +122,7 @@ OBJS 		:= $(SRCS:%.c=$(OBJ_DIR)%.o)
 DEPS 		:= $(OBJS:.o=.d)
 
 # Header files (Including the headerfiles allows you to do <libft.h> instaed of "../includes/libft.h")
-INC_FILES 	:= libft.h linkedList.h ft_printf.h get_next_line.h
+INC_FILES 	:= libft.h linkedList.h ft_printf.h get_next_line.h ft_dbltoa.h
 HEADERS 	:= $(addprefix $(INC_DIR), $(INC_FILES))
 
 # Targets

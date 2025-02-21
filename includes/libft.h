@@ -6,7 +6,7 @@
 /*   By: jmetzger <jmetzger@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/12 17:27:07 by jmetzger      #+#    #+#                 */
-/*   Updated: 2025/02/19 12:02:07 by jmetzger      ########   odam.nl         */
+/*   Updated: 2025/02/21 20:23:25 by jmetzger      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <fcntl.h>
+# include <stdbool.h>
 
 // mem-functions
 void			*ft_calloc(size_t count, size_t n);

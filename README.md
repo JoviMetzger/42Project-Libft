@@ -58,6 +58,7 @@ The main() doesn't test all the edge-cases of each function. <br>
 #include "includes/get_next_line.h"
 #include "includes/ft_printf.h"
 #include "includes/linkedList.h"
+#include "includes/ft_dbltoa.h"
 
 // 1) make
 // 2) cc -Wall -Werror -Wextra main.c libft.a && ./a.out
@@ -165,6 +166,54 @@ int main()
 	// Test printf functions
 	printf("\nTest printf functions\n");
 	ft_printf("Hello %s\n", "World");
+
+	// Test ft_dbltoa functions
+	printf("\nTest ft_dbltoa functions\n");
+	double input = __DBL_MIN__;
+	double input1 = __DBL_MAX__;
+	float input2 = -1231246524059005808017408.0f;
+	double input3 = -123126877777777781062520432865268252910947010799856319324944859136.0;
+	double input4 = 0.1234567891234567837965840908509562723338603973388671875;
+	double input5 = -1234567837723.123535;
+
+	char *output = ft_dbltoa(input);
+	char *output1 = ft_dbltoa(input1);
+	char *output2 = ft_dbltoa(input2);
+	char *output3 = ft_dbltoa(input3);
+	char *output4 = ft_dbltoa(input4);
+	char *output5 = ft_dbltoa(input5);
+
+	printf("MY value: %s\n", output);
+	printf("OG value: %.1024f\n\n", input);
+
+	printf("MY value: %s\n", output1);
+	printf("OG value: %f\n\n", input1);
+
+	printf("MY value: %s\n", output2);
+	printf("OG value: %f\n\n", input2);
+
+	printf("MY value: %s\n", output3);
+	printf("OG value: %f\n\n", input3);
+
+	printf("MY value: %s\n", output4);
+	printf("OG value: %f\n\n", input4);
+
+	printf("MY value: %s\n", output5);
+	printf("OG value: %f\n\n", input5);
+
+	// -------------------------------------------------------------------------------
+
+	double test = 1.0 / 0.0; // Division by zero creates +∞
+	double test1 = -1.0 / 0.0; // Negative division by zero creates -∞
+	double test2 = 0.0 / 0.0; // 0 divided by 0 produces NaN
+
+	char *str = ft_dbltoa(test);
+	char *str1 = ft_dbltoa(test1);
+	char *str2 = ft_dbltoa(test2);
+
+	printf("MY value:  %s -> OG value:  %f\n", str, test);
+	printf("MY value: %s -> OG value: %f\n", str1, test1);
+	printf("MY value:  %s -> OG value:  %f\n", str2, test2);
 
 	return 0;
 }
