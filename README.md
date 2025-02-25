@@ -175,6 +175,9 @@ int main()
 	double input3 = -123126877777777781062520432865268252910947010799856319324944859136.0;
 	double input4 = 0.1234567891234567837965840908509562723338603973388671875;
 	double input5 = -1234567837723.123535;
+	double input6 = 0.0;
+	double input7 = 0;
+	float input8 = 0.0f;
 
 	char *output = ft_dbltoa(input);
 	char *output1 = ft_dbltoa(input1);
@@ -182,6 +185,9 @@ int main()
 	char *output3 = ft_dbltoa(input3);
 	char *output4 = ft_dbltoa(input4);
 	char *output5 = ft_dbltoa(input5);
+	char *output6 = ft_dbltoa(input6);
+	char *output7 = ft_dbltoa(input7);
+	char *output8 = ft_dbltoa(input8);
 
 	printf("MY value: %s\n", output);
 	printf("OG value: %.1024f\n\n", input);
@@ -201,7 +207,17 @@ int main()
 	printf("MY value: %s\n", output5);
 	printf("OG value: %f\n\n", input5);
 
+	printf("MY value: %s\n", output6);
+	printf("OG value: %f\n\n", input6);
+
+	printf("MY value: %s\n", output7);
+	printf("OG value: %f\n\n", input7);
+
+	printf("MY value: %s\n", output8);
+	printf("OG value: %f\n\n", input8);
+
 	// -------------------------------------------------------------------------------
+	printf("-----------------------------------------------------------------------------------\n");
 
 	double test = 1.0 / 0.0; // Division by zero creates +∞
 	double test1 = -1.0 / 0.0; // Negative division by zero creates -∞
@@ -214,6 +230,7 @@ int main()
 	printf("MY value:  %s -> OG value:  %f\n", str, test);
 	printf("MY value: %s -> OG value: %f\n", str1, test1);
 	printf("MY value:  %s -> OG value:  %f\n", str2, test2);
+	printf("-----------------------------------------------------------------------------------\n");
 
 	return 0;
 }
