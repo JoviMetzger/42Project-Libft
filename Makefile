@@ -113,7 +113,7 @@ SRCS		:=	$(addprefix $(SRC_DIR)libft/, $(LIB)) \
 				$(addprefix $(SRC_DIR)linkedList/, $(LLIST)) \
 				$(addprefix $(SRC_DIR)GNL/, $(GNL)) \
 				$(addprefix $(SRC_DIR)ft_printf/, $(PRINTF)) \
-				$(addprefix $(SRC_DIR)ft_dbltoa/, $(DBLTOA)) \
+				$(addprefix $(SRC_DIR)ft_dbltoa/, $(DBLTOA))
 
 # Generate object file names
 OBJS 		:= $(SRCS:%.c=$(OBJ_DIR)%.o)
