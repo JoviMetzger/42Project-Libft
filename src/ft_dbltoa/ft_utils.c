@@ -42,7 +42,7 @@ char	*error_inf(double ogNum, unsigned long mantissa)
 	else if (!mantissa && ogNum < 0)
 		dblStr = ft_strdup("-inf");
 	else
-		dblStr = ft_strdup("nan");
+		dblStr = ft_strdup("NaN");
 
 	return (dblStr);
 }
