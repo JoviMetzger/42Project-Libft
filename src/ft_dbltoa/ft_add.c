@@ -35,22 +35,22 @@
 
 static char	*ft_add5(char *s1, char *s2)
 {
-	char		tmp[BIG_INT + 1];
+	char		tmp[MAX_DIGIT + 1];
 
-	ft_memset(tmp, 48, BIG_INT);
-	tmp[BIG_INT] = '\0';
-	ft_strlcpy(tmp, s1, BIG_INT + 1);
-	ft_strlcpy(s1, s2, BIG_INT + 1);
+	ft_memset(tmp, 48, MAX_DIGIT);
+	tmp[MAX_DIGIT] = '\0';
+	ft_strlcpy(tmp, s1, MAX_DIGIT + 1);
+	ft_strlcpy(s1, s2, MAX_DIGIT + 1);
 	tmp[0] = '+';
 	return (ft_subs(s1, tmp));
 }
 
 static char	*ft_add4(char *s1, char *s2)
 {
-	char		tmp[BIG_INT + 1];
+	char		tmp[MAX_DIGIT + 1];
 
-	ft_memset(tmp, 48, BIG_INT);
-	tmp[BIG_INT] = '\0';
+	ft_memset(tmp, 48, MAX_DIGIT);
+	tmp[MAX_DIGIT] = '\0';
 	ft_strlcpy(tmp, s2, BIG_INT + 1);
 	tmp[0] = '+';
 	return (ft_subs(s1, tmp));
@@ -58,7 +58,7 @@ static char	*ft_add4(char *s1, char *s2)
 
 static char	*ft_add3(char *s1)
 {
-	ft_memset(s1, 48, BIG_INT);
+	ft_memset(s1, 48, MAX_DIGIT);
 	s1[0] = '+';
 	return (s1);
 }
