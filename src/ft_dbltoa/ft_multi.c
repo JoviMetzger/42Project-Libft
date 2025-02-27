@@ -29,7 +29,7 @@ static void	ft_multi3(char *s1, t_number *num)
 {
 	ft_strlcpy(s1 + num->digit_s1 - 1, s1 + num->digit_s1,
 			MAX_DIGIT + 1 - num->digit_s1);
-	s1[BIG_INT - 1] = '0';
+	s1[MAX_DIGIT - 1] = '0';
 }
 
 static char	*ft_multi2(char *s1, char *s2, t_number *num)
@@ -39,7 +39,7 @@ static char	*ft_multi2(char *s1, char *s2, t_number *num)
 	char		tmp2[MAX_DIGIT + 1];
 
 	init_bigChar(tmp);
-	while (num->j_s2 >= num->digit_s2 && (num->i_s1 - (BIG_INT - 1 - num->j_s2)) > 1)
+	while (num->j_s2 >= num->digit_s2 && (num->i_s1 - (MAX_DIGIT - 1 - num->j_s2)) > 1)
 	{
 		while (num->i_s1 >= num->digit_s1 && (num->i_s1 - (MAX_DIGIT - 1 - num->j_s2)) > 1)
 		{
