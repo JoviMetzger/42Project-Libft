@@ -124,17 +124,17 @@ static void get_exponent_mantissa(int *exponent, unsigned long *mantissa, char *
 	
 	if (!(expoStr = convert_binary_to_decimal(expoTmp, "01", "0123456789")))
 	{
-        free(expoTmp);
-        free(mantTmp);
-        return;
-    }
+	        free(expoTmp);
+	        free(mantTmp);
+	        return;
+    	}
 	if (!(mantStr = convert_binary_to_decimal(mantTmp, "01", "0123456789")))
 	{
-        free(expoTmp);
-        free(mantTmp);
-        free(expoStr);
-        return;
-    }
+	        free(expoTmp);
+	        free(mantTmp);
+	        free(expoStr);
+	        return;
+    	}
 	
 	*exponent = ft_atoi(expoStr);
 	*mantissa = ft_atoi(mantStr);
@@ -159,25 +159,25 @@ static void get_exponent_mantissa(int *exponent, unsigned long *mantissa, char *
  * This function is designed to calculate powers of 2 using a big integer representation stored in a string (bigint). 
  * It does so by repeatedly adding the current value to itself, essentially doubling it, to simulate exponentiation.
  */
-static char	*pow_table2(char *bigint, unsigned long exponent)
+static char	*pow_table2(char *maxdigit, unsigned long exponent)
 {
 	char	pow2[MAX_DIGIT + 1];
 
 	if (!exponent)
 	{
-		init_bigChar(bigint);
-		bigint[MAX_DIGIT - 1] = '1';
+		init_bigChar(maxdigit);
+		maxdigit[MAX_DIGIT - 1] = '1';
 	}
 	else
 	{
 		while (exponent-- > 1)
 		{
-			ft_strlcpy(pow2, bigint, MAX_DIGIT + 1);
-			if (!ft_add(bigint, pow2))
+			ft_strlcpy(pow2, maxdigit, MAX_DIGIT + 1);
+			if (!ft_add(maxdigit, pow2))
 				return (NULL);
 		}
 	}
-	return (bigint);
+	return (maxdigit);
 }
 
 /*
