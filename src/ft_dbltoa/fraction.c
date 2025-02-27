@@ -161,18 +161,18 @@ static void get_exponent_mantissa(int *exponent, unsigned long *mantissa, char *
  */
 static char	*pow_table2(char *bigint, unsigned long exponent)
 {
-	char	pow2[BIG_INT + 1];
+	char	pow2[MAX_DIGIT + 1];
 
 	if (!exponent)
 	{
 		init_bigChar(bigint);
-		bigint[BIG_INT - 1] = '1';
+		bigint[MAX_DIGIT - 1] = '1';
 	}
 	else
 	{
 		while (exponent-- > 1)
 		{
-			ft_strlcpy(pow2, bigint, BIG_INT + 1);
+			ft_strlcpy(pow2, bigint, MAX_DIGIT + 1);
 			if (!ft_add(bigint, pow2))
 				return (NULL);
 		}
@@ -213,25 +213,25 @@ static char	*pow_table2(char *bigint, unsigned long exponent)
 static char	*fill_numerator(char *numerator, unsigned long mantValue, long expoValue)
 {
 	char	*mantissa;
-	char	exponent[BIG_INT + 1];
+	char	exponent[MAX_DIGIT + 1];
 
 	if (!(mantissa = ft_itoa(mantValue)))
 		return (NULL);
 	
-	if (ft_strlen(mantissa) >= BIG_INT)
+	if (ft_strlen(mantissa) >= MAX_DIGIT)
 		return (NULL);
 	if (expoValue > 0)
 	{	
-		ft_strlcpy(numerator + BIG_INT - ft_strlen(mantissa), mantissa, ft_strlen(mantissa) + 1);
+		ft_strlcpy(numerator + MAX_DIGIT - ft_strlen(mantissa), mantissa, ft_strlen(mantissa) + 1);
 		init_bigChar(exponent);
 
-		exponent[BIG_INT - 1] = '2';
+		exponent[MAX_DIGIT- 1] = '2';
 		if (!pow_table2(exponent, expoValue))
 			return (NULL);
 		ft_multi(numerator, exponent);
 	}
 	else
-		ft_strlcpy(numerator + BIG_INT - ft_strlen(mantissa), mantissa, ft_strlen(mantissa) + 1);
+		ft_strlcpy(numerator + MAX_DIGIT - ft_strlen(mantissa), mantissa, ft_strlen(mantissa) + 1);
 
 	free(mantissa);
 	return (numerator);
@@ -265,19 +265,19 @@ static char			*fill_denominator(char *denominator, long exponent, double ogNum)
 	if (exponent > 0)
 	{
 		init_bigChar(denominator);
-		denominator[BIG_INT - 1] = '1';
+		denominator[MAX_DIGIT - 1] = '1';
 	}
 	else if (ogNum != 0) 
 	{
 		init_bigChar(denominator);
-		denominator[BIG_INT - 1] = '2';
+		denominator[MAX_DIGIT - 1] = '2';
 		if (!pow_table2(denominator, -exponent))
 			return (NULL);
 	}
 	else 
 	{
 		init_bigChar(denominator);
-		denominator[BIG_INT - 1] = '1';
+		denominator[MAX_DIGIT - 1] = '1';
 	}
 	return (denominator);
 }
@@ -314,9 +314,9 @@ static char			*fill_denominator(char *denominator, long exponent, double ogNum)
  */
 char	*convert_to_fraction(double ogNum, char *nume, char *denom, bool *n_flag)
 {
-	int				exponent;	// exponent
+	int		exponent;	// exponent
 	unsigned long	mantissa; 	// mantissa
-	char			*strbits; 	// store the bitstring representation of ogNum
+	char		*strbits; 	// store the bitstring representation of ogNum
 
 	// Converts the raw memory of ogNum into a string of bits (holds the 64-bit IEEE-754 representation)
 	strbits = str_bits(&ogNum, sizeof(ogNum));
