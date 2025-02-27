@@ -179,7 +179,7 @@ char *ft_add_sign(char *dblStr, bool n_flag)
 		result[i++] = '-';
 
 	// Step 4:
-	strncpy(result + i, dblStr + 1, len);
+	ft_strncpy(result + i, dblStr + 1, len);
 	result[len + offset] = '\0';
 
 	free(dblStr);
