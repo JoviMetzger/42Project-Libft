@@ -19,8 +19,8 @@
 static int		convert_first_digit(char *resultStr, char *num, char *deno)
 {
 	int		len;
-	char	tmp[BIG_INT + 1];
-	char	dix[BIG_INT + 1];
+	char	tmp[MAX_DIGIT + 1];
+	char	dix[MAX_DIGIT + 1];
 
 	len = 1;
 	init_bigChar(tmp);
@@ -30,8 +30,8 @@ static int		convert_first_digit(char *resultStr, char *num, char *deno)
 	ft_strlcpy(tmp, num, BIG_INT + 1);
 	ft_divi(tmp, deno);
 	
-	resultStr[len] = tmp[BIG_INT - 1];
-	while (tmp[BIG_INT - 1]-- != '0')
+	resultStr[len] = tmp[MAX_DIGIT - 1];
+	while (tmp[MAX_DIGIT - 1]-- != '0')
 		ft_subs(num, deno);
 	
 	ft_multi(num, dix);
@@ -43,7 +43,7 @@ static int		convert_first_digit(char *resultStr, char *num, char *deno)
  */
 static void	place_decimal_point(char *resultStr, char *num, int *len, int *digitexp)
 {
-	char	zero[BIG_INT + 1];
+	char	zero[MAX_DIGIT + 1];
 	int		i;
 
 	i = 0;
@@ -85,7 +85,7 @@ static char	*initialize_result_string(char *digit, char *zero, int *digitexp, in
 		result[++(*len)] = '.';
 		
 	init_bigChar(digit);
-	digit[BIG_INT - 2] = '1';
+	digit[MAX_DIGIT - 2] = '1';
 	init_bigChar(zero);
 	return (result);
 }
@@ -97,9 +97,9 @@ static char	*initialize_result_string(char *digit, char *zero, int *digitexp, in
 char	*convert_to_str(char *dbl, char *num, char *deno, int digitexp)
 {
 	int		len;
-	char	tmp[BIG_INT + 1];
-	char	dix[BIG_INT + 1];
-	char	zero[BIG_INT + 1];
+	char	tmp[MAX_DIGIT + 1];
+	char	dix[MAX_DIGIT + 1];
+	char	zero[MAX_DIGIT + 1];
 
 	len = 1;
 	if (!(dbl = initialize_result_string(dix, zero, &digitexp, &len)))
@@ -111,11 +111,11 @@ char	*convert_to_str(char *dbl, char *num, char *deno, int digitexp)
 	while (compare_str(num, zero) != 0 && len < MAX_DIGIT)
 	{
 		init_bigChar(tmp);
-		ft_strlcpy(tmp, num, BIG_INT + 1);
+		ft_strlcpy(tmp, num, MAX_DIGIT + 1);
 		if (!ft_divi(tmp, deno))
 			return (NULL);
-		dbl[len++] = tmp[BIG_INT - 1];
-		while (tmp[BIG_INT - 1]-- != '0')
+		dbl[len++] = tmp[MAX_DIGIT - 1];
+		while (tmp[MAX_DIGIT - 1]-- != '0')
 			ft_subs(num, deno);
 		ft_multi(num, dix);
 		place_decimal_point(dbl, num, &len, &digitexp);
