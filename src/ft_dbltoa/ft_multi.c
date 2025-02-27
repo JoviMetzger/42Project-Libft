@@ -28,36 +28,36 @@
 static void	ft_multi3(char *s1, t_number *num)
 {
 	ft_strlcpy(s1 + num->digit_s1 - 1, s1 + num->digit_s1,
-			BIG_INT + 1 - num->digit_s1);
+			MAX_DIGIT + 1 - num->digit_s1);
 	s1[BIG_INT - 1] = '0';
 }
 
 static char	*ft_multi2(char *s1, char *s2, t_number *num)
 {
 	int			nbr;
-	char		tmp[BIG_INT + 1];
-	char		tmp2[BIG_INT + 1];
+	char		tmp[MAX_DIGIT + 1];
+	char		tmp2[MAX_DIGIT + 1];
 
 	init_bigChar(tmp);
 	while (num->j_s2 >= num->digit_s2 && (num->i_s1 - (BIG_INT - 1 - num->j_s2)) > 1)
 	{
-		while (num->i_s1 >= num->digit_s1 && (num->i_s1 - (BIG_INT - 1 - num->j_s2)) > 1)
+		while (num->i_s1 >= num->digit_s1 && (num->i_s1 - (MAX_DIGIT - 1 - num->j_s2)) > 1)
 		{
 			init_bigChar(tmp2);
 			nbr = s1[num->i_s1] - 48;
 			nbr *= (s2[num->j_s2] - 48);
-			tmp2[num->i_s1 - (BIG_INT - 1 - num->j_s2)] = nbr % 10 + 48;
-			tmp2[num->i_s1 - (BIG_INT - 1 - num->j_s2) - 1] = nbr / 10 + 48;
+			tmp2[num->i_s1 - (MAX_DIGIT - 1 - num->j_s2)] = nbr % 10 + 48;
+			tmp2[num->i_s1 - (MAX_DIGIT - 1 - num->j_s2) - 1] = nbr / 10 + 48;
 			if (!ft_add(tmp, tmp2))
 				return (NULL);
 			(num->i_s1)--;
 		}
-		if ((num->i_s1 - (BIG_INT - 1 - num->j_s2)) <= 1)
+		if ((num->i_s1 - (MAX_DIGIT - 1 - num->j_s2)) <= 1)
 			return (NULL);
 		(num->j_s2)--;
-		num->i_s1 = BIG_INT - 1;
+		num->i_s1 = MAX_DIGIT - 1;
 	}
-	ft_strlcpy(s1, tmp, BIG_INT + 1);
+	ft_strlcpy(s1, tmp, MAX_DIGIT + 1);
 	return (s1);
 }
 
@@ -69,7 +69,7 @@ char	*ft_multi(char *s1, char *s2)
 	init_struct(s1, s2, &num);
 	if (num.i_s1 < num.digit_s1 || num.j_s2 < num.digit_s2)
 	{
-		ft_memset(s1, 48, BIG_INT);
+		ft_memset(s1, 48, MAX_DIGIT);
 		s1[0] = '+';
 		return (s1);
 	}
@@ -77,7 +77,7 @@ char	*ft_multi(char *s1, char *s2)
 		sign = '-';
 	else if (s1[0] == s2[0])
 		sign = '+';
-	if (num.digit_s2 == (BIG_INT - 2) && s2[num.digit_s2] == '1' && s2[num.j_s2] == '0'
+	if (num.digit_s2 == (MAX_DIGIT - 2) && s2[num.digit_s2] == '1' && s2[num.j_s2] == '0'
 			&& num.digit_s1 > 1)
 		ft_multi3(s1, &num);
 	else if (!ft_multi2(s1, s2, &num))
