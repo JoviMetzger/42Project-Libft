@@ -31,10 +31,10 @@
  */
 char	*ft_dbltoa(double ogNum)
 {
-	int				digitexpo;					// stores the exponent
-	char			numerator[BIG_INT + 1]; 	// storing the numerator
-	char			denominator[BIG_INT + 1]; 	// storing the denominator
-	char			*dblStr;					// final string representation of the double
+	int			digitexpo;			// stores the exponent
+	char			numerator[MAX_DIGIT + 1]; 	// storing the numerator
+	char			denominator[MAX_DIGIT + 1]; 	// storing the denominator
+	char			*dblStr;			// final string representation of the double
 	bool 			n_flag;
 
 	n_flag = false;
