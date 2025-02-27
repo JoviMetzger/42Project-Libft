@@ -50,23 +50,25 @@ static void	str_reverse(char *str)
  */
 char	*ft_itoa_base(long nbr, const char *base)
 {
-	char			buffer[65];
-	int				i;
+	char		buffer[255];
+	int		i;
 	unsigned long	num;
+	size_t 		base_len;
 
+	base_len = ft_strlen(base);
 	i = 0;
 	if (nbr < 0)
 		num = -nbr;
 	else
 		num = nbr;
-	if (ft_strlen(base) < 2)
+	if (base_len < 2)
 		return (NULL);
 	if (nbr == 0)
 		return (ft_strdup("0"));
 	while (num)
 	{
-		buffer[i++] = base[num % ft_strlen(base)];
-		num /= ft_strlen(base);
+		buffer[i++] = base[num % base_len];
+		num /= base_len;
 	}
 	if (nbr < 0)
 		buffer[i++] = '-';
