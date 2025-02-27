@@ -85,7 +85,7 @@ static int	get_exponent_base10(double nb)
  */
 void	convert_to_sci_notation(char *num, char *deno, int *digitexpo, double ogNum)
 {
-	char	digit[BIG_INT + 1];
+	char	digit[MAX_DIGIT + 1];
 
 	// base-10 exponent needed to express ogNum in scientific notation
 	*digitexpo = get_exponent_base10(ogNum);
@@ -93,12 +93,12 @@ void	convert_to_sci_notation(char *num, char *deno, int *digitexpo, double ogNum
 	init_bigChar(digit);
 	if (*digitexpo > 0)
 	{
-		digit[BIG_INT - *digitexpo - 1] = '1';
+		digit[MAX_DIGIT - *digitexpo - 1] = '1';
 		ft_multi(deno, digit);
 	}
 	else if (*digitexpo < 0)
 	{
-		digit[BIG_INT + *digitexpo - 1] = '1';
+		digit[MAX_DIGIT + *digitexpo - 1] = '1';
 		ft_multi(num, digit);
 	}
 }
