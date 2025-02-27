@@ -17,29 +17,29 @@
 
 static void	ft_subs5(char *s1, char *s2)
 {
-	char		tmp[BIG_INT + 1];
+	char		tmp[MAX_DIGIT + 1];
 
-	ft_memset(tmp, 48, BIG_INT);
-	tmp[BIG_INT] = '\0';
-	ft_strlcpy(tmp, s2, BIG_INT + 1);
+	ft_memset(tmp, 48, MAX_DIGIT);
+	tmp[MAX_DIGIT] = '\0';
+	ft_strlcpy(tmp, s2, MAX_DIGIT + 1);
 	tmp[0] = '-';
 	ft_add(s1, tmp);
 }
 
 static void	ft_subs4(char *s1, char *s2)
 {
-	char		tmp[BIG_INT + 1];
+	char		tmp[MAX_DIGIT + 1];
 
-	ft_memset(tmp, 48, BIG_INT);
-	tmp[BIG_INT] = '\0';
-	ft_strlcpy(tmp, s2, BIG_INT + 1);
+	ft_memset(tmp, 48, MAX_DIGIT);
+	tmp[MAX_DIGIT] = '\0';
+	ft_strlcpy(tmp, s2, MAX_DIGIT + 1);
 	tmp[0] = '+';
 	ft_add(s1, tmp);
 }
 
 static char	*ft_subs3(char *s1)
 {
-	ft_memset(s1, 48, BIG_INT);
+	ft_memset(s1, 48, MAX_DIGIT);
 	s1[0] = '+';
 	return (s1);
 }
@@ -62,13 +62,13 @@ static void ft_subs2(char *s1, char *s2, t_number *num)
 
 static void ft_subs_swap_negate(char *s1, char *s2, t_number *num)
 {
-	char tmp[BIG_INT + 1];
+	char tmp[MAX_DIGIT + 1];
 
-	ft_memset(tmp, '0', BIG_INT);
-	tmp[BIG_INT] = '\0';
+	ft_memset(tmp, '0', MAX_DIGIT);
+	tmp[MAX_DIGIT] = '\0';
 
-	ft_strlcpy(tmp, s1, BIG_INT + 1);
-	ft_strlcpy(s1, s2, BIG_INT + 1);
+	ft_strlcpy(tmp, s1, MAX_DIGIT + 1);
+	ft_strlcpy(s1, s2, MAX_DIGIT + 1);
 	ft_subs2(s1, tmp, num);
 
 	// Flip sign
@@ -81,7 +81,7 @@ static void ft_subs_swap_negate(char *s1, char *s2, t_number *num)
 char *ft_subs(char *s1, char *s2)
 {
 	t_number	num;
-	int			comp;
+	int		comp;
 
 	init_struct(s1, s2, &num);
 	if (num.i_s1 == -1 || num.j_s2 == -1 || s2[num.digit_s2] == '\0')
