@@ -50,7 +50,7 @@ static void	ft_divi3(char *numer, char *denom)
 static void	ft_divi2(char *s1, char *s2, char *result, t_number *num)
 {
 	long	nb;
-	char	tmp[BIG_INT + 1];
+	char	tmp[MAX_DIGIT + 1];
 	char	numer[16];
 	char	denom[16];
 
@@ -58,7 +58,7 @@ static void	ft_divi2(char *s1, char *s2, char *result, t_number *num)
 		return ;
 	init_struct(s1, s2, num);
 	ft_divi3(numer, denom);
-	nb = BIG_INT - num->digit_s2;
+	nb = MAX_DIGIT - num->digit_s2;
 	if (nb > 15)
 		nb = 15;
 	ft_strlcpy(denom + 1, s2 + num->digit_s2, nb);
@@ -71,14 +71,14 @@ static void	ft_divi2(char *s1, char *s2, char *result, t_number *num)
 		nb = ft_atoi(numer) / ft_atoi(denom);
 	else
 		ft_divi4(s1, s2, tmp, &nb);
-	result[BIG_INT - 1] = nb + 48;
+	result[MAX_DIGIT - 1] = nb + 48;
 }
 
 char	*ft_divi(char *s1, char *s2)
 {
 	t_number	num;
 	char		sign;
-	char		result[BIG_INT + 1];
+	char		result[MAX_DIGIT + 1];
 
 	sign = '+';
 	init_bigChar(result);
@@ -91,7 +91,7 @@ char	*ft_divi(char *s1, char *s2)
 	s1[0] = '+';
 	s2[0] = '+';
 	ft_divi2(s1, s2, result, &num);
-	ft_strlcpy(s1, result, BIG_INT + 1);
+	ft_strlcpy(s1, result, MAX_DIGIT + 1);
 	s1[0] = sign;
 	return (s1);
 }
