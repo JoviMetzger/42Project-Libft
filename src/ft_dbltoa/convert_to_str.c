@@ -25,9 +25,9 @@ static int		convert_first_digit(char *resultStr, char *num, char *deno)
 	len = 1;
 	init_bigChar(tmp);
 	init_bigChar(dix);
-	dix[BIG_INT - 2] = '1';
+	dix[MAX_DIGIT - 2] = '1';
 	
-	ft_strlcpy(tmp, num, BIG_INT + 1);
+	ft_strlcpy(tmp, num, MAX_DIGIT + 1);
 	ft_divi(tmp, deno);
 	
 	resultStr[len] = tmp[MAX_DIGIT - 1];
@@ -96,7 +96,7 @@ static char	*initialize_result_string(char *digit, char *zero, int *digitexp, in
  */
 char	*convert_to_str(char *dbl, char *num, char *deno, int digitexp)
 {
-	int		len;
+	int	len;
 	char	tmp[MAX_DIGIT + 1];
 	char	dix[MAX_DIGIT + 1];
 	char	zero[MAX_DIGIT + 1];
