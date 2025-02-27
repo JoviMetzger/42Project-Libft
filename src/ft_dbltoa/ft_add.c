@@ -51,7 +51,7 @@ static char	*ft_add4(char *s1, char *s2)
 
 	ft_memset(tmp, 48, MAX_DIGIT);
 	tmp[MAX_DIGIT] = '\0';
-	ft_strlcpy(tmp, s2, BIG_INT + 1);
+	ft_strlcpy(tmp, s2, MAX_DIGIT + 1);
 	tmp[0] = '+';
 	return (ft_subs(s1, tmp));
 }
