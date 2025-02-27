@@ -20,8 +20,8 @@
  */
 void init_bigChar(char *str)
 {
-	ft_memset(str, 48, BIG_INT);
-	str[BIG_INT] = '\0';
+	ft_memset(str, 48, MAX_DIGIT);
+	str[MAX_DIGIT] = '\0';
 	str[0] = '+';
 }
 
@@ -57,7 +57,7 @@ char	*error_inf(double ogNum, unsigned long mantissa)
  */
 static char	*fill_str(char *str)
 {
-	int		i;
+	int	i;
 	char	*zero;
 	char	*tmp;
 
@@ -98,9 +98,9 @@ static char	*fill_str(char *str)
  */
 char	*str_bits(void *type, size_t size)
 {
-	char			*strBits; 	// Hold the final binary string
-	char			*tmp;		// Temporary string to hold each byte's binary form
-	char			*tmp2;		// Used for concatenation
+	char		*strBits; 	// Hold the final binary string
+	char		*tmp;		// Temporary string to hold each byte's binary form
+	char		*tmp2;		// Used for concatenation
 	unsigned char	*ptr;		// Pointer to read memory byte by byte
 
 	strBits = NULL;
