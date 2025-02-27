@@ -17,8 +17,8 @@
 # include <float.h>
 # include <ctype.h>
 
-# define MAX_DIGIT	1030
-# define BIG_INT	1024 // DBL_MIN is the larges number -> has 1024 digits
+# define MAX_DIGIT	1080
+# define BIG_INT	1080 // DBL_DENORM_MIN is the larges number -> has 1078 digits
 
 typedef struct s_number
 {
